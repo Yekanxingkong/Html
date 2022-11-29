@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="pixel-ratio-2 retina android android-6 android-6-0">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+        <meta name="theme-color" content="#3489eb">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <title>苏康码</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="mobileSelect.css">
+        <link rel="stylesheet" href="index20220509.css">
+        <link rel="manifest" href="manifest.json">
+        <script src="./base.js"></script>
+        <script src="skm1665467361.min.js"></script>        	
+        <script type="text/javascript" src="jquery-3.6.1.min.js"></script>
+        <script type="text/javascript" src="jquery.qrcode.min.js"></script>
+        <link rel="stylesheet" href="./layer.css" id="layui_layer_skinlayercss" style="">
+    </head>
+    <body>
+        <div class="wrapper">            
+            <div class="pic" style="background-color: #3489eb;">
+                <div class="icons">
+                    <div>
+                        <img class="icon" style="margin: 0px 0px 0px 0px;">
+                    </div>
+                    <div onclick="window.navigateHome&amp;&amp;navigateHome()" >苏康码
+                        <span id="codecolor">·绿码</span>
+                    </div>
+                    <div class="tel" id="code-name" style="margin: 0px 0px 0px 210px;">习近平</div>
+                </div>
+                <div class="code-name">
+                    <div id="code-tel">130****8964</div>
+                    <div id="code-id">110******019</div>
+                </div>
+            </div>
+        </div>
+        <div class="gxts-layout">
+            <div>
+                <p class="gxts">若您有近7天中高风险地区旅居史(含境外)请及时信息更新和风险报备。</p>
+            </div>
+        </div>
+        <div class="shadow-layout" style="background-color: #fff;">
+            <p class="text-center" id="now-time">11-28 15:37:40</p>
+            <div id="ymjz">
+                <div class="codeimg">
+                </div>
+            <div id="output" aria-label="绿码" role="img" style="cursor:pointer" class="">
+            </div>
+        </div>
+        <div class="uncityData">
+            <div class="tips">
+                <p class="green" id="codes-text"></p>
+            </div>
+            <p id="remainDays"></p>
+            <p id="rjmj"></p>
+            <p id="jjgl"></p>
+        </div>
+        <div class="cityData hide">
+            <p class="red">如需使用苏康码相关功能，请 
+                <span id="cityDataSubmit">更新信息</span>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        $("#output").empty();
+        $("#output").removeClass();
+        var e = "1231";
+        var o = "https://h5.dingtalk.com/healthAct/index.html?qrCode=" + e.qrCode + "&b=" + e.scanFlag + "#/result";
+        $("#output").qrcode({
+        render: "canvas",
+        text: o,
+        width: "250",
+        height: "250",
+        foreground: "green"});
+
+        var sed = function showTime() {
+            var atime = new Date();
+            var nowtime = atime.toLocaleTimeString();
+            var month = atime.getMonth() + 1; 
+            var day = atime.getDate();
+            var j = month + "-"+ day + " " + nowtime;
+            var g = document.getElementById("now-time");
+            g.innerHTML=j;
+        }
+        setInterval(sed, 1000);
+
+    </script>
+
+    </body>
+</html>
