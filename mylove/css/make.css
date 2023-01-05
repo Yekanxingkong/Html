@@ -1,0 +1,288 @@
+  #makeMenu {
+        width: 100%;
+        height: 50px;
+        background: #fff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index:98
+    }
+    #makeMenu ul{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height:50px ;
+    }
+    #makeMenu ul li {
+        width: 22%;
+        height: 50px;
+        padding-top: 8px;
+        font-size: 12px;
+        color: #484747;
+        float: left;
+        text-align: center;
+        list-style: none;
+    }
+    #makeMenu ul li img {
+        width: 20px;
+        height:20px;
+
+    }
+    #makeMenu ul li .btn{
+        width: 90%;
+        height: 30px;
+        padding: 0;
+        margin-left: 5%;
+        color: #fff;
+        margin-top: 5px;
+        line-height: 30px;
+        border-radius: 50px;
+        background: #ff3155;
+        text-align: center;
+    }
+    #zzc{
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.7;
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        left: 0;
+    }
+    #TextAndImgList, #infoList{
+        width: 100%;
+        height: 155px;
+        background: #fff;
+        border-radius: 10px 10px 0 0 ;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index:101;
+        animation:myfirst 0.2s;
+        -webkit-animation:myfirst 0.2s;
+        animation-fill-mode: forwards;/*当动画完成时，动画会停留在最后一帧�??*/
+        overflow: hidden;
+        padding: 5px;
+        box-sizing: border-box;
+
+    }
+    #TextUpdate,#ImgUpdate,#BgmUpdate{
+         width: 100%;
+         height: 110px;
+         background: #fff;
+         border-radius: 10px 10px 0 0 ;
+         position: fixed;
+         bottom: 0;
+         left: 0;
+         z-index:101;
+         animation:myfirst 0.2s;
+         -webkit-animation:myfirst 0.2s;
+         animation-fill-mode: forwards;/*当动画完成时，动画会停留在最后一帧�??*/
+         overflow: hidden;
+         padding: 5px;
+
+
+
+     }
+    @-webkit-keyframes myfirst /* Safari and Chrome */
+    {
+        0%   {bottom: -150px}
+        25%  {}
+        50%  {}
+        75%  {}
+        100% {}
+    }
+
+    #TextAndImgList .title,#ImgUpdate .title,#infoList .title{
+        text-align: center;
+        font-weight: bold;
+        margin-top: 5px;
+        color: #333333;
+    }
+    #TextAndImgList .boxList,#infoList .boxList{
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden
+    }
+    #TextAndImgList .item,#infoList .item {
+        display: inline-block;
+        width: 85px;
+        height:85px;
+        margin-top: 10px;
+        background: #f4f6f5;
+        margin-right: 8px;
+        padding: 5px;
+
+    }
+    #TextAndImgList .item.textItem, #infoList .item{
+        vertical-align: top;
+        font-size: 12px;
+        word-break:break-all;
+        white-space: pre-wrap;
+        color: #333333;
+    }
+    #TextAndImgList .item.imgItem{
+        vertical-align: top;
+        font-size: 12px;
+
+    }
+    #TextAndImgList .item.imgItem img {
+        width: 100%;
+        height: 100%;
+    }
+    #TextAndImgList .boxList::-webkit-scrollbar,#infoList .boxList::-webkit-scrollbar{
+      /*  display: none;*/
+    }
+    #TextUpdate textarea {
+        width: 75%;
+        height: 100px;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 13px;
+        line-height: 20px;
+        background: #f4f6f5;
+        border: none;
+        outline: none;
+
+    }
+    #TextUpdate .btn {
+        width: 15%;
+        height: 25px;
+        padding: 0 2px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 25px;
+        border-radius: 50px;
+        background: #ff3155;
+        color: #fff;
+        position: absolute;
+        right: 15px;
+        bottom: 5px;
+    }
+    #ImgUpdate,#BgmUpdate{
+        text-align: center;
+    }
+    #ImgUpdate .input-loc-img,#BgmUpdate .input-loc-img{
+        margin-top: 20px;
+        background: #fff;
+    }
+    #bgmSelectList,#previewView {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left:0;
+        z-index:100;
+        color: #333333;
+
+    }
+    #bgmSelectList .header,#previewView .header {
+        width: 100%;
+        height: 50px;
+        background: #fff;
+        line-height: 50px;
+        display: flex;
+        padding: 0 10px;
+        box-sizing: border-box;
+        color: #323232;
+    }
+    #bgmSelectList .header div, #previewView .header div{
+       flex: 1;
+    }
+    #previewView .header div>span{
+        background: #ff2649;
+        font-size: 14px;
+        padding: 5px 7px;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    #bgmSelectList .bgmTypeList{
+        width: 100%;
+        height: 35px;
+        margin-top: 10px;
+    }
+    #bgmSelectList .typeUl{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+    }
+    #bgmSelectList .typeUl::-webkit-scrollbar {
+        display: none; /* Chrome Safari */
+    }
+    #bgmSelectList .typeUl li {
+        list-style: none;
+        font-size: 14px;
+        display: inline-block;
+        color: #333333;
+        margin: 0 5px;
+        box-sizing: border-box;
+        background: #f6f6f6;
+        padding: 6px 15px ;
+        border-radius: 50px;
+        margin-top: 3px;
+        font-weight: bold;
+
+
+    }
+    #bgmSelectList .typeUl li.act{
+        background: #fff0f7;
+        color: #ee2748;
+    }
+    #bgmSelectList .MusicUl{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background: #a1a1a1;
+        margin-top: 10px;
+    }
+    #bgmSelectList .MusicUl li{
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        border-bottom: 1px solid #eee;
+        list-style: none;
+        font-size: 12px;
+        padding-left: 30px;
+        box-sizing: border-box;
+        background-color: #f6f6f6;
+    }
+    #bgmSelectList .MusicUl li:last-child{
+        border-bottom: none;
+    }
+    #bgmSelectList .noSetMusic,#bgmSelectList .uploadMusic{
+        width: 100%;
+        height: 35px;
+        margin: 10px 0px;
+        font-size: 12px;
+        line-height: 35px;
+        padding-left:30px ;
+        background-color: #f6f6f6;
+        box-sizing: border-box;
+    }
+    #bgmSelectList .uploadMusic span{
+        font-size:8px;
+        float:right;
+        margin-right: 10px;
+    }
+    #bgmSelectList .noSetMusic.act,#bgmSelectList .uploadMusic.act{
+        background-image: url("../images/musicdui.png");
+        background-size:15px 15px;
+        background-repeat: no-repeat;
+        background-position: 8px 10px;
+    }
+    #bgmSelectList .MusicUl li.act{
+        background-image: url("../images/musicdui.png");
+        background-size:15px 15px;
+        background-repeat: no-repeat;
+        background-position: 8px 10px;
+    }
